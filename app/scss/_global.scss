@@ -1,0 +1,377 @@
+html,
+body {
+  height: 100%;
+}
+img {
+  max-width: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.main {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+* ::before,
+* ::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+input,
+textarea {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  color: $gray;
+  overflow-x: hidden;
+}
+
+.button {
+  padding: 16px 17px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 22px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  background: $pink-grad;
+  box-shadow: 0px 4px 0px rgba($pink, 1);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 97%;
+    height: 47px;
+    border: 0.5px solid #fff;
+    border-radius: 10px;
+    z-index: 3;
+  }
+}
+
+.circle-anim {
+  position: relative;
+  display: inline-block;
+  & img:nth-child(1) {
+    animation: circle infinite linear 14s;
+  }
+  & img:nth-child(2) {
+    position: absolute;
+    left: 24px;
+    top: 23px;
+  }
+}
+
+@keyframes circle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.section-title {
+  font-family: "Foglihten";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 65px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  max-width: 337px;
+  margin: 0 auto;
+}
+
+.section-link {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  transition: all 0.2s;
+  margin-right: 10px;
+  & img {
+    width: 100%;
+  }
+  &:hover {
+    font-size: 25px;
+  }
+}
+
+@keyframes services {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes servicesArrow {
+  from {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.master-nav {
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
+  justify-content: center;
+  margin-top: 60px;
+}
+.slick-dots {
+  display: flex;
+  font-size: 0;
+  gap: 0 20px;
+  justify-content: center;
+  & li {
+    width: 20px;
+    height: 20px;
+    background: $gray-grad;
+    border-radius: 20px;
+  }
+  .slick-active {
+    background: $pink-grad;
+  }
+}
+
+@keyframes text1 {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.arrow-button img {
+  width: 100%;
+  margin-top: 0;
+  display: block;
+}
+.arrow-button:hover {
+  font-size: 25px;
+  transition: all 0.2s;
+  & img {
+    margin-top: 5px;
+  }
+}
+
+@keyframes string {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.slider-nav {
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.arrow-gray {
+  transition: 0.2s;
+}
+.services__tab-top--active img {
+  transform: rotate(180deg);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.breadcrumbs {
+  &-content {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+  }
+  &-content a {
+    font-size: 20px;
+    position: relative;
+    margin-right: 80px;
+  }
+  &-content a::before {
+    content: "";
+    position: absolute;
+    width: 39px;
+    height: 10px;
+    background-image: url(../img/arrow-breadcrumbs.svg);
+    background-repeat: no-repeat;
+    top: 36%;
+    right: -59px;
+  }
+  &-content p {
+    font-family: "Foglihten";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding-top: 5px;
+  }
+}
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.new-checkbox {
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  border-radius: 5px;
+  border: 1px solid $gray;
+}
+.checkbox:checked + .new-checkbox::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 800;
+  &::before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    content: "";
+    background-color: #d9d9d9;
+    opacity: 0.6;
+    width: 100%;
+    min-height: 100vh;
+  }
+  &-content {
+    background-color: #fff;
+    z-index: 999;
+    position: relative;
+    animation: modal forwards 0.2s ease-in-out;
+    max-width: 815px;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  &-inner {
+    border-radius: 20px;
+    border: 1px solid #666;
+    padding: 50px 100px;
+  }
+  .section-title {
+    max-width: 470px;
+    text-align: left;
+  }
+  &__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+  }
+  &__close line {
+    stroke: #666;
+    transition: 0.2s;
+
+  }
+  &__close:hover line {
+    stroke: #101828;
+  }
+}
+.modal-2 {
+  .modal-inner {
+    padding: 20px 100px;
+  }
+}
+
+
+@keyframes modal {
+  from {
+    opacity: 0.01;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>EniBrow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="modal modal-2 hidden">
+        <div class="modal-content">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="modal__close"
+          >
+            <line
+              x1="18.4549"
+              y1="0.917227"
+              x2="1.48281"
+              y2="18.4728"
+              stroke="#101828"
+              stroke-width="2"
+            />
+            <line
+              y1="-1"
+              x2="24.4182"
+              y2="-1"
+              transform="matrix(0.68552 0.728054 0.728054 -0.68552 1.99988 0)"
+              stroke="#101828"
+              stroke-width="2"
+            />
+          </svg>
+
+          <div class="modal-inner">
+            <div class="form-inner">
+              <h1 class="section-title">Записаться прямо сейчас</h1>
+              <input
+                type="text"
+                required
+                placeholder="Ваше имя"
+                class="form__input"
+              />
+              <input
+                type="text"
+                required
+                placeholder="+7"
+                class="form__input"
+                id="phone2"
+              />
+              <div class="form-dropdown">
+                <div class="form-dropdown__top">
+                  <input
+                    type="text"
+                    placeholder="Процедура"
+                    class="form__input"
+                    readonly
+                    required
+                  />
+                  <img src="img/arrow-gray.svg" alt="icon" />
+                </div>
+                <div class="form-dropdown-content hidden">
+                  <ul class="form-dropdown__list">
+                    <li>Татуаж глаз</li>
+                    <li>Татуаж губ</li>
+                    <li>Татуаж бровей</li>
+                    <li>Татуаж глаз</li>
+                  </ul>
+                </div>
+              </div>
+              <label class="form__label form__label--inform">
+                <input type="checkbox" class="form__checkbox checkbox" />
+                <span class="new-checkbox"></span>
+                <p>Есть старый татуаж</p>
+              </label>
+              <div class="form-dropdown">
+                <div class="form-dropdown__top">
+                  <input
+                    type="text"
+                    placeholder="Коррекция"
+                    class="form__input"
+                    readonly
+                    required
+                  />
+                  <img src="img/arrow-gray.svg" alt="icon" />
+                </div>
+                <div class="form-dropdown-content hidden">
+                  <ul class="form-dropdown__list">
+                    <li>123</li>
+                    <li>111</li>
+                    <li>333</li>
+                    <li>222</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form__buttons">
+                <button
+                  type="button"
+                  class="button form__button form__button--modal-2"
+                >
+                  Записаться
+                </button>
+                <p>Записаться через</p>
+                <div class="form__socials">
+                  <a href="#"><img src="img/wa-form.svg" alt="icon" /></a>
+                  <a href="#"><img src="img/tg-form.svg" alt="icon" /></a>
+                </div>
+              </div>
+
+              <label class="form__label">
+                <input
+                  required
+                  type="checkbox"
+                  class="form__checkbox checkbox"
+                />
+                <span class="new-checkbox"></span>
+                <p>Я даю свое согласие на обработку моих персональных данных</p>
+              </label>
+            </div>
+          </div>
+          <div class="thanks hidden">
+            <h1 class="thanks__title section-title">Спасибо!</h1>
+            <p class="thanks__text">Мы позвоним вам в самое ближайшее время!</p>
+            <button type="button" class="button thanks__button">
+              Отлично!
+            </button>
+          </div>
+        </div>
+      </div>
+      <header class="header">
+        <div class="container">
+          <div class="header-content">
+            <a href="#" class="header__logo">
+              <img src="img/logo.svg" alt="logo" />
+            </a>
+            <div class="header-inner">
+              <div class="header-top">
+                <p class="header__address">
+                  Москва, ул. Бауманская 43/1 стр. 1
+                </p>
+                <div class="header__socials">
+                  <a href="#"><img src="img/vk.svg" alt="icon" /></a>
+                  <a href="#"
+                    ><svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="20" height="20" rx="6" fill="white" />
+                      <path
+                        d="M5.5 10C5.5 8.89493 5.93899 7.83512 6.72039 7.05372C7.50179 6.27232 8.5616 5.83333 9.66667 5.83333C10.7717 5.83333 11.8315 6.27232 12.6129 7.05372C13.3943 7.83512 13.8333 8.89493 13.8333 10C13.8333 11.1051 13.3943 12.1649 12.6129 12.9463C11.8315 13.7277 10.7717 14.1667 9.66667 14.1667C8.5616 14.1667 7.50179 13.7277 6.72039 12.9463C5.93899 12.1649 5.5 11.1051 5.5 10ZM15.1667 4.5V4.83333H14.8333V4.5H15.1667Z"
+                        stroke="#666666"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#"
+                    ><svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20C8.23279 20.0029 6.49667 19.5352 4.97001 18.645L0.00401407 20L1.35601 15.032C0.465107 13.5049 -0.00293838 11.768 1.38802e-05 10C1.38802e-05 4.477 4.47701 0 10 0ZM6.59201 5.3L6.39201 5.308C6.26254 5.31589 6.13599 5.3499 6.02001 5.408C5.91153 5.46943 5.81251 5.54622 5.72601 5.636C5.60601 5.749 5.53801 5.847 5.46501 5.942C5.09514 6.4229 4.89599 7.01331 4.89901 7.62C4.90101 8.11 5.02901 8.587 5.22901 9.033C5.63801 9.935 6.31101 10.89 7.19901 11.775C7.41301 11.988 7.62301 12.202 7.84901 12.401C8.9524 13.3725 10.2673 14.073 11.689 14.447L12.257 14.534C12.442 14.544 12.627 14.53 12.813 14.521C13.1043 14.506 13.3886 14.4271 13.646 14.29C13.777 14.2225 13.9048 14.1491 14.029 14.07C14.029 14.07 14.072 14.042 14.154 13.98C14.289 13.88 14.372 13.809 14.484 13.692C14.567 13.606 14.639 13.505 14.694 13.39C14.772 13.227 14.85 12.916 14.882 12.657C14.906 12.459 14.899 12.351 14.896 12.284C14.892 12.177 14.803 12.066 14.706 12.019L14.124 11.758C14.124 11.758 13.254 11.379 12.722 11.137C12.6663 11.1127 12.6067 11.0988 12.546 11.096C12.4776 11.089 12.4085 11.0967 12.3433 11.1186C12.2781 11.1405 12.2183 11.1761 12.168 11.223C12.163 11.221 12.096 11.278 11.373 12.154C11.3315 12.2098 11.2744 12.2519 11.2088 12.2751C11.1433 12.2982 11.0723 12.3013 11.005 12.284C10.9399 12.2665 10.876 12.2445 10.814 12.218C10.69 12.166 10.647 12.146 10.562 12.11C9.98808 11.8595 9.4567 11.5211 8.98701 11.107C8.86101 10.997 8.74401 10.877 8.62401 10.761C8.2306 10.3842 7.88774 9.95801 7.60401 9.493L7.54501 9.398C7.50264 9.33416 7.46837 9.2653 7.44301 9.193C7.40501 9.046 7.50401 8.928 7.50401 8.928C7.50401 8.928 7.74701 8.662 7.86001 8.518C7.97001 8.378 8.06301 8.242 8.12301 8.145C8.24101 7.955 8.27801 7.76 8.21601 7.609C7.93601 6.925 7.64601 6.244 7.34801 5.568C7.28901 5.434 7.11401 5.338 6.95501 5.319C6.90101 5.313 6.84701 5.307 6.79301 5.303C6.65872 5.29633 6.52415 5.29766 6.39001 5.307L6.59101 5.299L6.59201 5.3Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#"
+                    ><svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_68_68)">
+                        <path
+                          d="M10 0.3125C4.64813 0.3125 0.3125 4.64875 0.3125 10C0.3125 15.3512 4.64875 19.6875 10 19.6875C15.3519 19.6875 19.6875 15.3512 19.6875 10C19.6875 4.64875 15.3512 0.3125 10 0.3125ZM14.7581 6.94938L13.1681 14.4419C13.0506 14.9731 12.7344 15.1019 12.2931 14.8519L9.87125 13.0669L8.70312 14.1919C8.57438 14.3206 8.465 14.43 8.215 14.43L8.38688 11.965L12.875 7.91C13.0706 7.73812 12.8319 7.64062 12.5737 7.8125L7.02688 11.3044L4.63625 10.5581C4.11688 10.3944 4.105 10.0387 4.74563 9.78875L14.0856 6.18688C14.5194 6.03063 14.8981 6.2925 14.7575 6.94875L14.7581 6.94938Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_68_68">
+                          <rect width="20" height="20" fill="white" />
+                        </clipPath>
+                      </defs></svg
+                  ></a>
+                  <a href="#"
+                    ><svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="10" cy="10" r="10" fill="white" />
+                      <path
+                        d="M10.3254 10.0323C8.69466 10.0323 7.3393 8.66381 7.3393 7.04445C7.3393 5.3691 8.69466 4 10.3259 4C12.0126 4 13.312 5.36852 13.312 7.04445C13.3091 7.83958 12.9939 8.601 12.4357 9.16138C11.8775 9.72176 11.122 10.0352 10.3352 10.0329L10.3254 10.0323ZM10.3254 5.75994C9.63499 5.75994 9.1097 6.3462 9.1097 7.04504C9.1097 7.74271 9.63499 8.27355 10.3259 8.27355C11.0446 8.27355 11.5422 7.74271 11.5422 7.04504C11.5428 6.34561 11.0446 5.75994 10.3254 5.75994ZM11.5145 12.5185L13.2017 14.1665C13.5337 14.5287 13.5337 15.0596 13.2017 15.395C12.8427 15.7572 12.2891 15.7572 12.0126 15.395L10.3259 13.719L8.69466 15.395C8.52899 15.5624 8.30733 15.6458 8.05797 15.6458C7.86459 15.6458 7.64351 15.5618 7.44956 15.395C7.11764 15.0596 7.11764 14.5287 7.44956 14.1659L9.16396 12.5179C8.54483 12.3327 7.95091 12.0703 7.39587 11.7368C6.98084 11.5134 6.89829 10.9552 7.11938 10.5357C7.39587 10.1169 7.89345 10.0055 8.3362 10.2849C8.93572 10.6546 9.62447 10.8502 10.3268 10.8502C11.0291 10.8502 11.7179 10.6546 12.3174 10.2849C12.7602 10.0055 13.2849 10.1169 13.5337 10.5357C13.783 10.9552 13.6716 11.5128 13.2843 11.7368C12.7596 12.0723 12.1506 12.3231 11.5145 12.5185Z"
+                        fill="#666666"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="header-bot">
+                <ul class="header__list">
+                  <li class="header-dropdown__button">
+                    Наши услуги
+                    <svg
+                      width="14"
+                      height="9"
+                      viewBox="0 0 14 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 1L7.26087 7L13 1"
+                        stroke="white"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+
+                    <ul class="header-dropdown">
+                      <li>
+                        <p>
+                          Татуаж бровей
+                          <img src="img/arrow-right-white.svg" alt="icon" />
+                        </p>
+
+                        <ul class="header-subdropdown">
+                          <li><a href="#">Теневая растушевка</a></li>
+                          <li><a href="#">Теневая растушевка</a></li>
+                          <li><a href="#">Теневая растушевка</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p>
+                          Татуаж бровей
+                          <img src="img/arrow-right-white.svg" alt="icon" />
+                        </p>
+
+                        <ul class="header-subdropdown">
+                          <li><a href="#">Теневая растушевка</a></li>
+                          <li><a href="#">Теневая растушевка</a></li>
+                          <li><a href="#">Теневая растушевка</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p>
+                          Татуаж бровей
+                          <img src="img/arrow-right-white.svg" alt="icon" />
+                        </p>
+
+                        <ul class="header-subdropdown">
+                          <li><a href="#">Теневая растушевка</a></li>
+                          <li><a href="#">Теневая растушевка</a></li>
+                          <li><a href="#">Теневая растушевка</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p>
+                          Татуаж бровей
+                          <img src="img/arrow-right-white.svg" alt="icon" />
+                        </p>
+
+                        <ul class="header-subdropdown">
+                          <li><a href="#">Теневая растушевка</a></li>
+                          <li><a href="#">Теневая растушевка</a></li>
+                          <li><a href="#">Теневая растушевка</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p>
+                          Татуаж бровей
+                          <img src="img/arrow-right-white.svg" alt="icon" />
+                        </p>
+
+                        <ul class="header-subdropdown">
+                          <li><a href="#">Теневая растушевка</a></li>
+                          <li><a href="#">Теневая растушевка</a></li>
+                          <li><a href="#">Теневая растушевка</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Цены</a></li>
+                  <li><a href="#">Акции</a></li>
+                  <li><a href="#">Наши мастера</a></li>
+                  <li><a href="#">Портфолио</a></li>
+                  <li><a href="#">Статьи</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+                <a href="tel:+79063131331" class="header__phone">
+                  <img src="img/phone.svg" alt="icon" />
+                  <p>+7 (906) 313-13-31</p>
+                </a>
+                <button type="button" class="header__button modal-2__open">Записаться</button>
+              </div>
+            </div>
+            <button type="button" class="header-menu__button">
+              <img src="img/menu.svg" alt="icon" />
+              <img src="img/close.svg" class="hidden" alt="icon" />
+            </button>
+          </div>
+        </div>
+        <div class="header-menu">
+          <h3 class="header-menu__title">НАШИ УСЛУГИ</h3>
+          <div class="header-menu__item">
+            <div class="header-menu__item-top">
+              <h3>Татуаж бровей</h3>
+              <img src="img/arrow-white.svg" alt="icon" />
+            </div>
+            <div class="header-menu__item-text">
+              <a href="#">Теневая растушевка</a>
+              <a href="#">Пудровое напыление</a>
+              <a href="#">Волосковая техника</a>
+            </div>
+          </div>
+          <div class="header-menu__item">
+            <div class="header-menu__item-top">
+              <h3>Татуаж бровей</h3>
+              <img src="img/arrow-white.svg" alt="icon" />
+            </div>
+            <div class="header-menu__item-text">
+              <a href="#">Теневая растушевка</a>
+              <a href="#">Пудровое напыление</a>
+              <a href="#">Волосковая техника</a>
+            </div>
+          </div>
+          <div class="header-menu__item">
+            <div class="header-menu__item-top">
+              <h3>Татуаж бровей</h3>
+              <img src="img/arrow-white.svg" alt="icon" />
+            </div>
+            <div class="header-menu__item-text">
+              <a href="#">Теневая растушевка</a>
+              <a href="#">Пудровое напыление</a>
+              <a href="#">Волосковая техника</a>
+            </div>
+          </div>
+          <h3 class="header-menu__title">НАШИ УСЛУГИ</h3>
+          <ul class="header-menu__list">
+            <li><a href="#">Цены</a></li>
+            <li><a href="#">Акции</a></li>
+            <li class="header-menu__item header-menu__list-item">
+              <div class="header-menu__item-top">
+                <h3>Портфолио</h3>
+                <img src="img/arrow-white.svg" alt="icon" />
+              </div>
+              <div class="header-menu__item-text">
+                <a href="#">До/После</a>
+                <a href="#">Татуаж бровей</a>
+                <a href="#">Татуаж губ</a>
+                <a href="#">Татуаж глаз</a>
+              </div>
+            </li>
+            <li><a href="#">Наши мастера</a></li>
+            <li><a href="#">Статьи</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <button type="button" class="button header-menu__btn">
+            Записаться
+          </button>
+        </div>
+      </header>
+      <main class="main header-check">
+        <div class="breadcrumbs">
+          <div class="container">
+            <div class="breadcrumbs-content">
+              <a href="#">Главная</a>
+              <p>наши мастера</p>
+            </div>
+          </div>
+        </div>
+        <section class="portfolio portfolio-page">
+          <div class="container">
+            <h1 class="section-title">Наше портфолио</h1>
+            <div class="portfolio__buttons">
+              <button
+                id="slider-1"
+                type="button"
+                class="portfolio__button portfolio__button--active"
+              >
+                До/После
+              </button>
+              <button id="slider-2" type="button" class="portfolio__button">
+                Татуаж бровей
+              </button>
+              <button id="slider-3" type="button" class="portfolio__button">
+                Татуаж губ
+              </button>
+              <button id="slider-4" type="button" class="portfolio__button">
+                Татуаж глаз
+              </button>
+            </div>
+            <div class="portfolio-content">
+              <div class="portfolio-slider-1-inner portfolio-slider">
+                <h1 class="portfolio-slider__title">До/После</h1>
+                <div class="portfolio-slider-1">
+                  <div class="portfolio__item">
+                    <img src="img/portfolio4.png" alt="image" />
+                  </div>
+                  <div class="portfolio__item">
+                    <img src="img/portfolio5.png" alt="image" />
+                  </div>
+                  <div class="portfolio__item">
+                    <img src="img/portfolio6.png" alt="image" />
+                  </div>
+                  <div class="portfolio__item">
+                    <img src="img/portfolio7.png" alt="image" />
+                  </div>
+                </div>
+                <div class="slider-nav portfolio-slider-1-nav">
+                  <div class="portfolio-slider-1-dots"></div>
+                </div>
+              </div>
+              <div class="portfolio-slider-2-inner portfolio-slider hidden">
+                <h1 class="portfolio-slider__title">Татуаж бровей</h1>
+                <div class="portfolio-slider-2">
+                  <div class="portfolio__item">
+                    <img src="img/portfolio8.png" alt="image" />
+                  </div>
+                  <div class="portfolio__item">
+                    <img src="img/portfolio4.png" alt="image" />
+                  </div>
+                  <div class="portfolio__item">
+                    <img src="img/portfolio5.png" alt="image" />
+                  </div>
+                  <div class="portfolio__item">
+                    <img src="img/portfolio6.png" alt="image" />
+                  </div>
+                </div>
+                <div class="slider-nav portfolio-slider-2-nav">
+                  <div class="portfolio-slider-2-dots"></div>
+                </div>
+              </div>
+              <div class="portfolio-slider-3-inner portfolio-slider hidden">
+                <h1 class="portfolio-slider__title">Татуаж губ</h1>
+                <div class="portfolio-slider-3">
+                  <div class="portfolio__item">
+                    <img src="img/portfolio9.png" alt="image" />
+                  </div>
+                  <div class="portfolio__item">
+                    <img src="img/portfolio8.png" alt="image" />
+                  </div>
+                  <div class="portfolio__item">
+                    <img src="img/portfolio7.png" alt="image" />
+                  </div>
+                  <div class="portfolio__item">
+                    <img src="img/portfolio6.png" alt="image" />
+                  </div>
+                </div>
+                <div class="slider-nav portfolio-slider-3-nav">
+                  <div class="portfolio-slider-3-dots"></div>
+                </div>
+              </div>
+              <div class="portfolio-slider-4-inner portfolio-slider hidden">
+                <h1 class="portfolio-slider__title">Татуаж глаз</h1>
+                <div class="portfolio-slider-4">
+                  <div class="portfolio__item">
+                    <img src="img/portfolio4.png" alt="image" />
+                  </div>
+                  <div class="portfolio__item">
+                    <img src="img/portfolio5.png" alt="image" />
+                  </div>
+                  <div class="portfolio__item">
+                    <img src="img/portfolio9.png" alt="image" />
+                  </div>
+                  <div class="portfolio__item">
+                    <img src="img/portfolio8.png" alt="image" />
+                  </div>
+                </div>
+                <div class="slider-nav portfolio-slider-4-nav">
+                  <div class="portfolio-slider-4-dots"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="form">
+          <div class="container">
+            <h1 class="section-title">Записаться прямо сейчас</h1>
+            <div class="form-content">
+              <div class="circle-anim">
+                <img src="img/form-circle.png" />
+                <img src="img/form-circle-icon.png" />
+              </div>
+              <div class="form-inner">
+                <input type="text" placeholder="Ваше имя" class="form__input" />
+                <input
+                  type="text"
+                  placeholder="+7"
+                  id="phone3"
+                  class="form__input"
+                />
+                <button type="button" class="button form__button">
+                  Отправить
+                </button>
+                <label class="form__label">
+                  <input type="checkbox" class="form__checkbox checkbox" />
+                  <span class="new-checkbox"></span>
+                  <p>
+                    Я даю свое согласие на обработку моих персональных данных
+                  </p>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about">
+          <div class="container">
+            <h1 class="section-title">Подробнее об услуге</h1>
+            <div class="about-content">
+              <p>
+                Мы вынуждены отталкиваться от того, что семантический разбор
+                внешних противодействий однозначно определяет каждого участника
+                как способного принимать собственные решения касаемо направлений
+                прогрессивного развития. Предварительные выводы неутешительны:
+                высококачественный прототип будущего проекта, а также свежий
+                взгляд на привычные вещи — безусловно открывает новые горизонты
+                для приоретизации разума над эмоциями. Но новая модель
+                организационной деятельности влечет за собой процесс внедрения и
+                модернизации прогресса профессионального сообщества. Кстати,
+                акционеры крупнейших компаний освещают
+              </p>
+              <p>
+                Мы вынуждены отталкиваться от того, что семантический разбор
+                внешних противодействий однозначно определяет каждого участника
+                как способного принимать собственные решения касаемо направлений
+                прогрессивного развития. Предварительные выводы неутешительны:
+                высококачественный прототип будущего проекта, а также свежий
+                взгляд на привычные вещи — безусловно открывает новые горизонты
+                для приоретизации разума над эмоциями. Но новая модель
+                организационной деятельности влечет за собой процесс внедрения и
+                модернизации прогресса профессионального
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="where">
+          <h1 class="section-title">где мы находимся?</h1>
+          <div class="where-info">
+            <div class="container">
+              <div class="where-content">
+                <a href="tel:" class="where__phone">
+                  <img src="img/where-phone.svg" alt="icon" />
+                  <p>8 (945) 999 - 99 99</p>
+                </a>
+                <div class="where__socials">
+                  <a href="#"><img src="img/vk2.svg" alt="icon" /></a>
+                  <a href="#"><img src="img/inst2.svg" alt="icon" /></a>
+                  <a href="#"><img src="img/wa.svg" alt="icon" /></a>
+                  <a href="#"><img src="img/tg.svg" alt="icon" /></a>
+                  <a href="#"><img src="img/ok2.svg" alt="icon" /></a>
+                </div>
+                <div class="where__button modal-2__open">
+                  <img src="img/where-btn.svg" />
+                  <p>Записаться</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <iframe
+            class="map"
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A90620747ea42955b3ad931d36ca9cc591fbebca3d11d2f7bf8b112d084632ec8&amp;source=constructor"
+            width="100%"
+            height="560"
+            frameborder="0"
+          ></iframe>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-dropdown">
+              <h3 class="footer__title">НАШИ УСЛУГИ</h3>
+              <div class="footer-dropdown__item">
+                <div class="footer-dropdown__item-top">
+                  <h3>Татуаж бровей</h3>
+                  <svg
+                    width="14"
+                    height="9"
+                    viewBox="0 0 14 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1L7.26087 7L13 1"
+                      stroke="#666666"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                </div>
+                <div class="footer-dropdown__item-text">
+                  <a href="#">Теневая растушевка</a>
+                  <a href="#">Пудровое напыление</a>
+                  <a href="#">Волосковая техника</a>
+                </div>
+              </div>
+              <div class="footer-dropdown__item">
+                <div class="footer-dropdown__item-top">
+                  <h3>Татуаж губ</h3>
+                  <svg
+                    width="14"
+                    height="9"
+                    viewBox="0 0 14 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1L7.26087 7L13 1"
+                      stroke="#666666"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                </div>
+                <div class="footer-dropdown__item-text">
+                  <a href="#">Теневая растушевка</a>
+                  <a href="#">Пудровое напыление</a>
+                  <a href="#">Волосковая техника</a>
+                </div>
+              </div>
+              <div class="footer-dropdown__item">
+                <div class="footer-dropdown__item-top">
+                  <h3>Татуаж глаз</h3>
+                  <svg
+                    width="14"
+                    height="9"
+                    viewBox="0 0 14 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1L7.26087 7L13 1"
+                      stroke="#666666"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                </div>
+                <div class="footer-dropdown__item-text">
+                  <a href="#">Теневая растушевка</a>
+                  <a href="#">Пудровое напыление</a>
+                  <a href="#">Волосковая техника</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer-menu">
+              <h3 class="footer__title">МЕНЮ</h3>
+              <div class="footer-menu-content">
+                <a href="#">Цены</a>
+                <a href="#">Акции</a>
+                <div class="footer-dropdown__item">
+                  <div class="footer-dropdown__item-top">
+                    <h3>Портфолио</h3>
+                    <img src="img/arrow-gray.svg" class="arrow-gray" />
+                  </div>
+                  <div class="footer-dropdown__item-text">
+                    <a href="#">До/После</a>
+                    <a href="#">Татуаж бровей</a>
+                    <a href="#">Татуаж глаз</a>
+                  </div>
+                </div>
+                <a href="#">Статьи</a>
+                <a href="#">Контакты</a>
+              </div>
+            </div>
+            <div class="footer-info">
+              <h3 class="footer__title">ТЕЛЕФОН</h3>
+              <a href="tel:" class="footer-info__phone footer-info__item">
+                <img src="img/footer-phone.svg" alt="icon" />
+                <p>+7 (906) 313-13-31</p>
+              </a>
+              <h3 class="footer__title">АДРЕС</h3>
+              <div class="footer-info__item">
+                <img src="img/address.svg" alt="icon" />
+                <p>Москва: ул. Бауманская 43/1 стр. 1</p>
+              </div>
+              <div class="footer-info__item">
+                <img src="img/address.svg" alt="icon" />
+                <p>5 минут от метро “Такое-то”</p>
+              </div>
+              <div class="footer-info__item">
+                <img src="img/address.svg" alt="icon" />
+                <p>Режим работы: с 10;00 до 22:00</p>
+              </div>
+            </div>
+
+            <div class="footer__socials">
+              <a href="#"><img src="img/vk-footer.svg" alt="icon" /></a>
+              <a href="#"><img src="img/inst-footer.svg" alt="icon" /></a>
+              <a href="#"><img src="img/wa-footer.svg" alt="icon" /></a>
+              <a href="#"><img src="img/tg-footer.svg" alt="icon" /></a>
+              <a href="#"><img src="img/ok-footer.svg" alt="icon" /></a>
+            </div>
+          </div>
+
+          <p class="footer__copyright">
+            © Все права защищены. <a href="#">Политика конфиденциальности.</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
